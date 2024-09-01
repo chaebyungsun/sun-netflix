@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Homepage from "./pages/Homepage/Homepage";
 import MovieDetailPage from "./pages/MovieDetail/MovieDetailPage";
-import MoviePage from "./pages/Moives/MoviePage";
+import MoviePage from "./pages/Movies/MoviePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 
