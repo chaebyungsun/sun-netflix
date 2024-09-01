@@ -7,19 +7,23 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 const AppLayout = () => {
   return (
     <div>
       <Navbar expand="lg" className="navbar">
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/120px-Netflix_2015_logo.svg.png"
               alt=""
             />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Toggle
+            aria-controls="navbarScroll"
+            className="custom-toggler"
+          />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
