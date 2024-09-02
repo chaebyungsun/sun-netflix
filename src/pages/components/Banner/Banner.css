@@ -13,8 +13,9 @@
   width: 100%;
 }
 .banner_text_area {
-  width: 36%;
+  width: 40%;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   height: 100%;
@@ -22,4 +23,9 @@
 }
 .banner_text_area > * {
   z-index: 2;
+}
+@media (max-width: 768px) {
+  .banner_text_area {
+    width: 80%;
+  }
 }
