@@ -1,9 +1,8 @@
 import React from "react";
-import { useTopRatedQuery } from "../../../hooks/useTopRatedMovies";
+import "./MovieSlider.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Alert } from "react-bootstrap";
-import MovieCard from "../../../common/MovieCard/MovieCard";
+import MovieCard from "../MovieCard/MovieCard";
 
 const responsive = {
   desktop: {
@@ -19,18 +18,12 @@ const responsive = {
     items: 1,
   },
 };
-const TopRatedMovieSlide = () => {
-  const { data, isLoading, isError, error } = useTopRatedQuery();
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-  if (isError) {
-    return <Alert variant="dark">{error.message}</Alert>;
-  }
+const MovieSlider = ({ title, movies }) => {
   return (
     <div>
-      <h3>Top Rated</h3>
+      {" "}
+      <h3>{title}</h3>
       <Carousel
         infinite={true}
         centerMode={true}
@@ -38,7 +31,7 @@ const TopRatedMovieSlide = () => {
         containerClass="carousel-container"
         responsive={responsive}
       >
-        {data.results.map((movie) => (
+        {movies.map((movie) => (
           <MovieCard movie={movie} key={movie.id} />
         ))}
       </Carousel>
@@ -46,4 +39,4 @@ const TopRatedMovieSlide = () => {
   );
 };
 
-export default TopRatedMovieSlide;
+export default MovieSlider;

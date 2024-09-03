@@ -15,10 +15,13 @@ const AppLayout = () => {
       <Navbar expand="lg" className="navbar">
         <Container fluid>
           <Navbar.Brand>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/120px-Netflix_2015_logo.svg.png"
-              alt=""
-            />
+            <a href="/">
+              {" "}
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/120px-Netflix_2015_logo.svg.png"
+                alt=""
+              />
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarScroll"

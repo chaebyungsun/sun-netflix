@@ -3,7 +3,12 @@ body {
   color: #fff !important;
 }
 .navbar {
-  margin: 10px 25px;
+  padding: 20px !important;
+}
+
+/* 스크롤 후 배경색이 검은색으로 변경 */
+.navbar.scrolled {
+  background-color: #141414; /* 넷플릭스 스타일의 검은색 배경 */
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* 외부 이미지 URL 사용 */
