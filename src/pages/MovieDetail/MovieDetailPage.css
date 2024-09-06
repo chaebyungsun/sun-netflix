@@ -1,0 +1,75 @@
+* {
+  color: #fff !important;
+}
+.movie-detail-page {
+  padding: 100px;
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 50px;
+}
+
+h4 {
+  font-weight: bold;
+}
+.title {
+  font-weight: bold !important;
+}
+.mb-3 {
+  background-color: #141414 !important;
+}
+/* 리뷰 제목에 스타일 적용 */
+.movie-detail-page .title {
+  font-size: 1.5rem; /* 제목 크기 */
+  font-weight: bold; /* 굵은 글씨 */
+  color: #333; /* 글자 색상 */
+  margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 리뷰 내용에 스타일 적용 */
+.movie-detail-page .card-text {
+  font-size: 1rem; /* 텍스트 크기 */
+  line-height: 1.5; /* 줄 간격 */
+  color: #555; /* 글자 색상 */
+}
+
+/* 더보기/접기 버튼 스타일 적용 */
+.movie-detail-page .btn-link {
+  font-size: 0.9rem;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.movie-detail-page .btn-link:hover {
+  text-decoration: underline;
+}
+
+/* 카드 스타일 적용 */
+.movie-detail-page .card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* 스피너 중앙 정렬 */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   Alert,
   Row,
@@ -19,6 +19,11 @@ const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const [page, setPage] = useState(1);
   const [searchInput, setSearchInput] = useState(query.get("q") || "");
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    navigate(`/movies/${id}`); // 영화 ID를 이용해 상세 페이지로 이동
+  };
 
   const keyword = query.get("q");
   const handlePageClick = ({ selected }) => {
@@ -89,7 +94,12 @@ const MoviePage = () => {
             {data?.results.map((movie) => (
               <Col key={movie.id}>
                 {" "}
-                <MovieCard movie={movie} className="movie_card" />
+                <div
+                  onClick={() => handleCardClick(movie.id)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <MovieCard movie={movie} className="movie_card" />
+                </div>
               </Col>
             ))}
           </Row>
